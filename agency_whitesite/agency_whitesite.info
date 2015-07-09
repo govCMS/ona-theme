@@ -70,7 +70,7 @@ stylesheets[all][] = libraries/gray/css/gray.min.css
 ; Optionally add some JavaScripts to your theme.
 
 scripts[] = js/agency.js
-scripts[] = libraries/gray/js/jquery.gray.min.js
+scripts[] = libraries/gray/js/jquery.gray.js
 
 
 ; This section lists the regions defined in Zen's default page.tpl.php and

@@ -12,8 +12,13 @@ h1 {
   color: #bbb;
 }
 
-h1 span {
-  font-size: 20px;
+h1 small {
+  font-size: 60%;
+  display: block;
+}
+
+h2 {
+  display: none;
 }
 
 h3 {
@@ -21,17 +26,13 @@ h3 {
   text-align: left;
   background: #cfcfcf;
   margin: 20px 0 25px;
-}
-
-h3 span {
-  display: inline-block;
   padding: 8px 10px;
   color: #fff;
 }
 
 .container {
   width: 80%;
-  max-width: 740px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -52,7 +53,12 @@ h3 span {
 h3 + .col-half,
 h3 + .col-half + .col-half {
   position: relative;
-  height: 77px;
+  height: 120px;
+  top: 25px;
+}
+
+h3 + .col-half {
+  padding-bottom: 80px;
 }
 
 pre {
@@ -74,41 +80,46 @@ code {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-@media (max-width: 480px) {
-  h1 span {
-    display: block;
-  }
-
-  h2 {
-    display: none;
-  }
-
-  *[data-label]:before {
-    content: attr(data-label);
-    font-size: 15px;
-    color: #999;
-    display: block;
-    position: absolute;
-    top: -25px;
-    width: 100%;
-  }
-
-  h3 + .col-half,
-  h3 + .col-half + .col-half {
-    position: relative;
-    height: 120px;
-    top: 25px;
-  }
-
-  h3 + .col-half {
-    padding-bottom: 80px;
-  }
+*[data-label]:before {
+  content: attr(data-label);
+  font-size: 15px;
+  color: #999;
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: -25px;
+  width: 100%;
 }
-
 
 @media (min-width: 481px) {
   body {
     padding-top: 0;
+  }
+
+  h1 small {
+    display: inline;
+  }
+
+  h2 {
+    display: block;
+  }
+
+  h3 + .col-half,
+  h3 + .col-half + .col-half {
+    height: 77px;
+    top: 0;
+  }
+
+  h3 + .col-half {
+    padding-bottom: 0;
+  }
+
+  .container {
+    max-width: 740px;
+  }
+
+  *[data-label]:before {
+    content: none;
   }
 
   .col-half {

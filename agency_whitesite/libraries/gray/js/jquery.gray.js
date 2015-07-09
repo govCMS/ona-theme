@@ -1,8 +1,8 @@
-/* Modernizr 2.7.1 (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-inlinesvg-prefixes-css_filters-svg_filters
+/*! Gray v1.4.2 (https://github.com/karlhorky/gray) | MIT */
+/*! Modernizr 2.8.3 (Custom Build) | MIT & BSD */
+/* Build: http://modernizr.com/download/#-inlinesvg-prefixes-css_filters-svg_filters
  */
-;window.Modernizr=window.Modernizr||function(a,b,c){function v(a){i.cssText=a}function w(a,b){return v(l.join(a+";")+(b||""))}function x(a,b){return typeof a===b}function y(a,b){return!!~(""+a).indexOf(b)}function z(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:x(f,"function")?f.bind(d||b):f}return!1}var d="2.7.1",e={},f=b.documentElement,g="modernizr",h=b.createElement(g),i=h.style,j,k={}.toString,l=" -webkit- -moz- -o- -ms- ".split(" "),m={svg:"http://www.w3.org/2000/svg"},n={},o={},p={},q=[],r=q.slice,s,t={}.hasOwnProperty,u;!x(t,"undefined")&&!x(t.call,"undefined")?u=function(a,b){return t.call(a,b)}:u=function(a,b){return b in a&&x(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=r.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(r.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(r.call(arguments)))};return e}),n.inlinesvg=function(){var a=b.createElement("div");return a.innerHTML="<svg/>",(a.firstChild&&a.firstChild.namespaceURI)==m.svg};for(var A in n)u(n,A)&&(s=A.toLowerCase(),e[s]=n[A](),q.push((e[s]?"":"no-")+s));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)u(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof enableClasses!="undefined"&&enableClasses&&(f.className+=" "+(b?"":"no-")+a),e[a]=b}return e},v(""),h=j=null,e._version=d,e._prefixes=l,e}(this,this.document),Modernizr.addTest("cssfilters",function(){var a=document.createElement("div");return a.style.cssText=Modernizr._prefixes.join("filter:blur(2px); "),!!a.style.length&&(document.documentMode===undefined||document.documentMode>9)}),Modernizr.addTest("svgfilters",function(){var a=!1;try{a=typeof SVGFEColorMatrixElement!==undefined&&SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE==2}catch(b){}return a});
-
+;window.Modernizr=window.Modernizr||function(a,b,c){function v(a){i.cssText=a}function w(a,b){return v(l.join(a+";")+(b||""))}function x(a,b){return typeof a===b}function y(a,b){return!!~(""+a).indexOf(b)}function z(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:x(f,"function")?f.bind(d||b):f}return!1}var d="2.8.3",e={},f=b.documentElement,g="modernizr",h=b.createElement(g),i=h.style,j,k={}.toString,l=" -webkit- -moz- -o- -ms- ".split(" "),m={svg:"http://www.w3.org/2000/svg"},n={},o={},p={},q=[],r=q.slice,s,t={}.hasOwnProperty,u;!x(t,"undefined")&&!x(t.call,"undefined")?u=function(a,b){return t.call(a,b)}:u=function(a,b){return b in a&&x(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=r.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(r.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(r.call(arguments)))};return e}),n.inlinesvg=function(){var a=b.createElement("div");return a.innerHTML="<svg/>",(a.firstChild&&a.firstChild.namespaceURI)==m.svg};for(var A in n)u(n,A)&&(s=A.toLowerCase(),e[s]=n[A](),q.push((e[s]?"":"no-")+s));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)u(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof enableClasses!="undefined"&&enableClasses&&(f.className+=" "+(b?"":"no-")+a),e[a]=b}return e},v(""),h=j=null,e._version=d,e._prefixes=l,e}(this,this.document),Modernizr.addTest("cssfilters",function(){var a=document.createElement("div");return a.style.cssText=Modernizr._prefixes.join("filter:blur(2px); "),!!a.style.length&&(document.documentMode===undefined||document.documentMode>9)}),Modernizr.addTest("svgfilters",function(){var a=!1;try{a=typeof SVGFEColorMatrixElement!==undefined&&SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE==2}catch(b){}return a});
 ;(function ($, window, document, undefined) {
 
   var pluginName = 'gray',
@@ -30,7 +30,7 @@
     this.init();
   }
 
-  Plugin.prototype = {
+  $.extend(Plugin.prototype, {
 
     init: function () {
       var element;
@@ -47,6 +47,8 @@
       }
     },
 
+    // TODO: Test a freshly made element (modernizr feature test?)
+    // instead of testing the active element (fragile)
     cssFilterDeprecated: function(element) {
       return element.css('filter') === 'none';
     },
@@ -95,8 +97,8 @@
           y,
           margin;
 
-      x = backgroundPosition.match(/^(-?\d+\S+)/)[0]
-      y = backgroundPosition.match(/\s(-?\d+\S+)$/)[0]
+      x = backgroundPosition.match(/^(-?\d+\S+)/)[0];
+      y = backgroundPosition.match(/\s(-?\d+\S+)$/)[0];
 
       margin = 'margin:' + y + ' 0 0 ' + x;
 
@@ -132,7 +134,7 @@
         size = {
           width: w,
           height: h
-        }
+        };
       } else {
 
         size = {
@@ -170,7 +172,7 @@
           position;
 
       url       = this.extractUrl(element.css('background-image'));
-      bgSize    = this.getBgSize(url, element.css('background-size'))
+      bgSize    = this.getBgSize(url, element.css('background-size'));
       offset    = this.positionToNegativeMargin(element.css('background-position'));
 
       params.styles = this.getComputedStyle(element[0]);
@@ -184,12 +186,26 @@
       return params;
     },
 
-    setFadeStyles: function(styles, url, width, height) {
+    setStyles: function(styles, url, width, height) {
+      styles.display  = 'inline-block';
+      styles.overflow =
+        styles['overflow-x'] =
+        styles['overflow-y'] = 'hidden';
       styles['background-image'] = 'url("' + url + '")';
       styles['background-size'] = width + 'px ' + height + 'px';
-      delete styles['filter'];
+      delete styles.filter;
 
       return styles;
+    },
+
+    // TODO: Run this outside of the plugin so that it's not run
+    // on every element
+    addSVGFilterOnce: function() {
+      $body = $('body');
+      if (!$body.data('plugin_' + pluginName + '_has_filter')) {
+        $body.data('plugin_' + pluginName + '_has_filter', 'true')
+          .append('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute"><defs><filter id="gray"><feColorMatrix type="saturate" values="0"/></filter></defs></svg>');
+      }
     },
 
     switchImage: function(element) {
@@ -201,34 +217,22 @@
 
       classes = this.settings.fade ? this.settings.classes.fade : '';
 
-      // TODO: use templating or DOM elements here
       template = $(
-        '<div class="grayscale-replaced ' + classes + '">' +
-          '<svg xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 '+params.svg.width+' '+params.svg.height+'" width="'+params.svg.width+'" height="'+params.svg.height+'" style="'+params.svg.offset+'">' +
-            '<defs>' +
-              '<filter id="gray">' +
-                '<feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0" />' +
-              '</filter>' +
-            '</defs>' +
-            '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="'+params.svg.width+'" height="'+params.svg.height+'" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="'+params.svg.url+'" />' +
+        '<div class="grayscale grayscale-replaced ' + classes + '">' +
+          '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + params.svg.width + ' ' + params.svg.height + '" width="' + params.svg.width + '" height="' + params.svg.height + '" style="' + params.svg.offset + '">' +
+            '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="' + params.svg.width + '" height="' + params.svg.height + '" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + params.svg.url + '" />' +
           '</svg>' +
         '</div>');
 
-      params.styles['display']  = 'inline-block';
-      params.styles['overflow'] =
-        params.styles['overflow-x'] =
-        params.styles['overflow-y'] = 'hidden';
-
-      if (this.settings.fade) {
-        params.styles = this.setFadeStyles(params.styles, params.svg.url, params.svg.width, params.svg.height);
-      }
+      params.styles = this.setStyles(params.styles, params.svg.url, params.svg.width, params.svg.height);
 
       // TODO: Should this really set all params or should we set only unique ones by comparing to a control element?
       template.css(params.styles);
 
+      this.addSVGFilterOnce();
       element.replaceWith(template);
     }
-  };
+  });
 
   $.fn[pluginName] = function (options) {
     this.each(function() {
@@ -239,8 +243,8 @@
     return this;
   };
 
-  $(window).on('load', function() {
-    $('.grayscale')[pluginName]();
+  $(document).ready(function() {
+    $('.grayscale:not(.grayscale-replaced)')[pluginName]();
   });
 
 })(jQuery, window, document);
