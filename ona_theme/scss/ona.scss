@@ -1,0 +1,69 @@
+// Styles for Defence Force Remuneration Tribunal Drupal theme
+// 2015 - Tim Hurley
+
+// ------------------
+
+
+// Mixins
+@mixin left95 {
+  float: left;
+  width: 95%;
+}
+
+// Vars
+$primaryColour: #444;  // dark colour text
+$highlightColour: #A71B33;  // their current dark red colour
+// $footerTopColour: #607986;  // their current bluey/grey color
+$footerTopColour: #728D9B;  // their current bluey/grey color, but AA accessible against #222 (used in the footer)
+$footerBottomColour: #A2B7C2;  // their current bluey/grey color
+$footerC: #A2B7C2;  // their current bluey/grey color
+$lightGrey: #777;  // the lightest grey for text we can use
+
+$borderRadius: 4px;
+$fontFamily: Tahoma,​Geneva,​sans-serif;
+$headings: #536C78;
+$buttonLeftUnselected: #A71B33;
+$buttonLeftSelected: #fff;
+$buttonUnselected: #fff;
+$buttonSelected: #A71B33;
+$dottedBorder: #dde5ee;
+$htmlBGcolour: #f5f5f5;
+
+$menuBG: #e2e2e2;
+
+
+
+
+// Agency White Site changes ----------------
+
+@font-face {
+  font-family: Anivers;
+  src: url('../font/Anivers_Regular.otf') format("opentype");
+}
+
+@font-face {
+  font-family: Anivers;
+  font-weight: bold;
+  src: url('../font/Anivers_Bold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: Anivers;
+  font-style: italic;
+  src: url('../font/Anivers_Italic.otf') format("opentype");
+}
+
+@font-face {
+  font-family: Anivers;
+  font-variant: all-small-caps;
+  src: url('../font/Anivers_SmallCaps.otf') format("opentype");
+}
+
+// Import basic overriding styles
+@import 'styles';
+
+// Import responsive styles
+@import 'responsive';
+
+// Import print styles ..if any
+@import 'print';
