@@ -32,7 +32,9 @@
   </header>
 
   <?php print render($page['navigation']); ?>
-
+  <?php if ($title): ?>
+        <h1 class="page__title title element-invisible" id="page-title-extra"><?php print $title; ?></h1>
+  <?php endif; ?>
   <?php
   // Render the sidebar to see if there's anything in them.
   $sidebar  = render($page['sidebar']);
