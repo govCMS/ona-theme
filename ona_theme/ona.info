@@ -61,7 +61,7 @@ stylesheets[all][] = css/ona.css
 
 ; Optionally add some JavaScripts to your theme.
 
-scripts[] = js/ona.js
+scripts[] = js/ona.min.js
 
 
 ; This section lists the regions defined in Zen's default page.tpl.php and

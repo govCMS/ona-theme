@@ -15,7 +15,7 @@
     width: 100%;
     margin: 10px 0 !important;
     .block__content {
-      margin-right: 6px !important;
+      //margin-right: 6px !important;
       .form-item input {
         border-radius: 4px;
       }
@@ -76,7 +76,7 @@
 
   // Nav
   .region-navigation {
-    #tinynav1 {
+    .block-superfish, #tinynav1 {
       width: 100%;
     }
   }

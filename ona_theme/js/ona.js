@@ -1,7 +1,7 @@
 (function ($) {
     $(document).ready(function () {
         if(jQuery("ul.rslides_tabs").length) {
-            jQuery("ul.rslides_tabs").append("<li><a href='#' id='stopStartSlide' title='Select to Pause' class='started'>&#9612;&#9612;</a></li>");
+            jQuery("ul.rslides_tabs").append("<li><a href='#' id='stopStartSlide' title='Select to Pause' class='started'>&#9614;&#9614;</a></li>");
             //Slideshow exists... lets change them every 7 seconds
             var interval = setInterval(function() {
                 if(jQuery("li.rslides_here").is(':nth-last-child(2)')) {
@@ -40,7 +40,7 @@
                     }, 7000);
                     jQuery(this).addClass("started");
                     jQuery(this).removeClass("stopped");
-                    jQuery(this).html("&#9612;&#9612;");
+                    jQuery(this).html("&#9614;&#9614;");
                     jQuery(this).attr("title", "Select to Pause");
                 }
             });

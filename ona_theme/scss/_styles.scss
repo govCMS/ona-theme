@@ -206,10 +206,11 @@ ul.rslides_tabs {
           text-align: center;
         }
         &.started {
-          padding-left: 0.25em;
+          padding-left: 0.55em;
+          letter-spacing: -6px;
         }
         &.stopped {
-          padding-right: 6px;
+          padding-left: 6px;
         }
       }
     }
@@ -813,7 +814,6 @@ div.toc-filter-back-to-top {
       padding-bottom: 0.45em;
       margin-bottom: 0.45em;
       color: #fff;
-      // border-bottom: 1px solid $highlightColour;
       border-bottom: 1px solid rgba($footerBottomColour, 0.5);
     }
     ul.menu {
