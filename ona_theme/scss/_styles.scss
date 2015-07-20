@@ -299,9 +299,11 @@ input[type="submit"]:hover, .slide-show__read-more-link:hover,
 .img-float--left, .img-float-left {
   float:left !important;
 }
-
 .img-float--none, .img-float-none {
   float:none !important;
+}
+img.media-element {
+  border-colour: $lightGrey;  // set the colour incase a border is set in the WYSIWYG editor
 }
 
 // Not Front page specific rules
@@ -681,7 +683,9 @@ th {
 
   .content-float-right {
     float: right;
-padding: 5px;
+    font-size: 90%;
+    padding: 5px;
+    text-align: center;
   }
 
 }
