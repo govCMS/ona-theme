@@ -1,13 +1,12 @@
 <?php
-/**
- * @file
- * Contains the theme's functions to manipulate Drupal's default markup.
- *
- * Complete documentation for this file is available online.
- * @see https://drupal.org/node/1728096
- */
 
-/**
- * @param $variables
- * Method used to remove author from search results *
- */
+
+function ona_preprocess_page(&$variables) {
+  $path = drupal_get_path('theme', 'ona');
+  $my_settings = array(
+    'themePath' => $path,
+  );
+  drupal_add_js(array('myTheme' => $my_settings), 'setting');
+
+}
+
