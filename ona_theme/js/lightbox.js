@@ -34,13 +34,17 @@
 // Configuration
 //
 
-// If you would like to use a custom loading image or close button reference them in the next two lines.
-var loadingImage = 'loading.gif';
-var closeButton = 'close.gif';
+var script = "";
+if (document.currentScript) {
+    script = document.currentScript.src;
+} else {
+    var scripts = document.getElementsByTagName('script');
+    script = scripts[scripts.length-1].src;
 
-
-
-
+}
+var path = script.substring(0, script.lastIndexOf('/'));
+var loadingImage = path + '/../images/loading.gif';
+var closeButton = path + '/../images/close.gif';
 
 //
 // getPageScroll()
