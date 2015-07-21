@@ -303,7 +303,7 @@ input[type="submit"]:hover, .slide-show__read-more-link:hover,
   float:none !important;
 }
 img.media-element {
-  border-color: $lightGrey;  // set the colour incase a border is set in the WYSIWYG editor
+  border-colour: $lightGrey;  // set the colour incase a border is set in the WYSIWYG editor
 }
 
 // Not Front page specific rules
@@ -856,13 +856,16 @@ div.toc-filter-back-to-top {
     text-align: center;
   }
   ul.menu {
+    // text-align: center;
     padding: 0;
     li.menu__item {
+      // display: inline-block;
       float: none;
       a {
         color: $primaryColour;
         font-size: 0.9em;
       }
+      // color: #fff;
       a:before {
         border-left: solid 1px lighten($primaryColour, 30%); // 'pipe'
         border-left: solid 1px rgba($footerTopColour, 0.5); // 'pipe'
@@ -875,29 +878,33 @@ div.toc-filter-back-to-top {
     }
   }
 }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 
 
-
-// Lightbox functionality styles
+// JS Lightbox styles
 #lightbox{
   background-color:#eee;
   padding: 10px;
   border-bottom: 2px solid #666;
   border-right: 2px solid #666;
-}
-#lightboxDetails{
-  font-size: 0.8em;
-  padding-top: 0.4em;
-}
-#lightboxCaption {
-  float: left;
-}
-#keyboardMsg {
-  float: right;
-}
-
-#lightbox img {
-  border: none;
+  #lightboxDetails{
+    font-size: 0.8em;
+    padding-top: 0.4em;
+  }
+  #lightboxCaption {
+    float: left;
+  }
+  #keyboardMsg {
+    float: right;
+  }
+  img {
+    border: none;
+    &#closeButton {
+      width: 30px;
+      right: -7px;
+      top: -7px;
+    }
+  }
 }
 #overlay {
   background-image: url('../images/overlay.png');
