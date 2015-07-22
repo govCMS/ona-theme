@@ -15,9 +15,12 @@
     width: 100%;
     margin: 10px 0 !important;
     .block__content {
-      //margin-right: 6px !important;
+      margin-right: 0 !important;
       .form-item input {
         border-radius: 4px;
+      }
+      .form-submit {
+        margin-right: 0;
       }
     }
   }
@@ -172,4 +175,16 @@
     }
   }
 
+}
+
+
+
+
+@media (max-width: 500px) {
+  // Make content (.media-element) imgs not have some stupidly small amount of text show up to the side on smallish screens. Instead make img take up whole line and centre it.
+  p img.media-element {
+    margin: 0 auto !important;
+    float: none;
+    display: block;
+  }
 }
