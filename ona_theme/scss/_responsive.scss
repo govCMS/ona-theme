@@ -182,9 +182,9 @@
 
 @media (max-width: 500px) {
   // Make content (.media-element) imgs not have some stupidly small amount of text show up to the side on smallish screens. Instead make img take up whole line and centre it.
-  p img.media-element {
+  body.not-front article p img.media-element {
     margin: 0 auto !important;
-    float: none;
-    display: block;
+    float: none !important;
+    display: block !important;
   }
 }
