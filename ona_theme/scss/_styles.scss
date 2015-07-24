@@ -13,7 +13,7 @@
 
 a:focus,
 a:active {
-  outline: $highlightColour solid medium !important;
+  outline: $highlightColour solid 1px !important;
 }
 a,
 a:hover,
@@ -90,9 +90,11 @@ h1, h2, h3, h4, h5, h6,
 // may need to be modded in other places too
 h1 {
   font-size: 2.0rem;
+  line-height: 2rem;
 }
 h2 {
   font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 
@@ -121,7 +123,8 @@ h2 {
   .block__content>.menu {
     a {
       text-transform: capitalize;
-      font-size: 120%;
+      //font-size: 120%;
+      font-size: 100%;
       font-weight: 200;
       border: 1px solid rgba(#fff,0.1);
       outline: none !important;
@@ -147,6 +150,7 @@ h2 {
 
 .breadcrumb {
   border-color: lighten($highlightColour,8%);
+  padding: 8px 0;
 }
 
 .header__logo {
@@ -356,11 +360,12 @@ body.not-front {
   }
 
   div#block-search-api-page-default-search {
+    float: right;
     div.block__content {
-      margin-right: 20px;
+      //margin-right: 20px;
 
       button#edit-submit-1 {
-        margin-right: 20px;
+        //margin-right: 20px;
       }
     }
   }
@@ -764,6 +769,8 @@ body.section-careers {
   }
 }
 
+h2.label,
+h3.label,
 h4.label {
   font-weight: 400;
   color: $lightGrey;
