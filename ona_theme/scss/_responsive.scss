@@ -1,6 +1,19 @@
 // responsive style rules go here
 
 
+@media (min-width: 980px) {
+  // Override homepage slideshow widths
+  .slide-show__slide-left,
+  #block-views-slideshow-block {
+    .group-left {
+      width: 668px;
+    }
+    .group-right {
+      padding-left: 5px;
+    }
+  }
+}
+
 @media (max-width: 980px) {
   // Front page specific rules
   body.front .panel-1col-stacked {

@@ -119,6 +119,7 @@ h2 {
   #block-search-api-page-default-search {
     display: inline-block;
     margin: 5px 0 0 9px;
+    float: right;
   }
   .block__content>.menu {
     a {
@@ -398,6 +399,16 @@ body.front {
     @extend left95;
   }
 
+  .slide-show__slides, #block-views-slideshow-block .rslides {
+    // Use the same gradient as the other homepage boxes do..
+    background-color: #F6F9FA;
+    background: linear-gradient(#F6F9FA 60%,#fff);
+    border-bottom: 1px solid $dottedBorder;
+    .content a {
+      border: 1px solid $dottedBorder;
+    }
+  }
+
   .panel-1col-stacked {
     .panel-col-top {
       float: left;
@@ -411,6 +422,7 @@ body.front {
     .panel-col-middle {
       width: 100%;
       display: inline-block;
+      margin: 20px 0 20px;
       > div:first-of-type,
       .panels-ipe-sort-container > div:first-of-type .panel-pane.pane-block {
         margin-left: 0 !important;
