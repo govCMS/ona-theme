@@ -399,13 +399,18 @@ body.front {
     @extend left95;
   }
 
-  .slide-show__slides, #block-views-slideshow-block .rslides {
-    // Use the same gradient as the other homepage boxes do..
-    background-color: #F6F9FA;
-    background: linear-gradient(#F6F9FA 60%,#fff);
-    border-bottom: 1px solid $dottedBorder;
-    .content a {
-      border: 1px solid $dottedBorder;
+  .slide-show__slides, #block-views-slideshow-block {
+    .rslides {
+      // Use the same gradient as the other homepage boxes do..
+      background-color: #F6F9FA;
+      background: linear-gradient(#F6F9FA 60%,#fff);
+      border-bottom: 1px solid $dottedBorder;
+      .content a {
+        border: 1px solid $dottedBorder;
+      }
+    }
+    .group-right {
+      padding-left: 25px;
     }
   }
 
