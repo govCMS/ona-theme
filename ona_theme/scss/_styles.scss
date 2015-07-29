@@ -116,7 +116,7 @@ h2 {
 }
 .layout-front__content,
 .front .panel-1col-stacked .panel-col-top {
-  //margin-left: 0; // Tim strongly disagrees with this and may have commented it out..
+  margin-left: 0;
 }
 
 // ------------------------------------------
@@ -434,7 +434,7 @@ body.front {
         @extend left95;
       }
       p {
-        margin-bottom: 0;
+        //margin-bottom: 0; // Tim strongly disagrees with this and may have commented it out..
       }
     }
 
@@ -561,7 +561,7 @@ body.front {
         }
       }
       .pane-vacancies {
-        padding-left: 25px;
+        //padding-left: 25px;
         h2 {
           margin-left: 10px;
           color: #231f20;
@@ -596,6 +596,10 @@ body.front {
         padding-right: 15px;
         text-align: left;
         padding-bottom: 10px;
+        a {
+          text-decoration: none;
+          color: $highlightColour;
+        }
       }
     }
     .bean-image-and-text h2 {
