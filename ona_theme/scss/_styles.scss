@@ -104,10 +104,17 @@ h2 {
 
 
 // overrides for this theme
-.layout-front__two-columns, .front .panel-1col-stacked .panel-col-top .panels-ipe-portlet-wrapper, .front .panel-1col-stacked .panel-col-top .panel-pane, .front .panel-1col-stacked .panel-col-bottom .panels-ipe-portlet-wrapper, .front .panel-1col-stacked .panel-col-bottom .panel-pane {
+.layout-front__two-columns,
+.front .panel-1col-stacked .panel-col-top .panels-ipe-portlet-wrapper,
+.front .panel-1col-stacked .panel-col-top .panel-pane,
+.front .panel-1col-stacked .panel-col-middle .panels-ipe-portlet-wrapper,
+.front .panel-1col-stacked .panel-col-middle .panel-pane,
+.front .panel-1col-stacked .panel-col-bottom .panels-ipe-portlet-wrapper,
+.front .panel-1col-stacked .panel-col-bottom .panel-pane {
   width: 100%;
 }
-.layout-front__content, .front .panel-1col-stacked .panel-col-top {
+.layout-front__content,
+.front .panel-1col-stacked .panel-col-top {
   margin-left: 0;
 }
 
@@ -368,7 +375,6 @@ body.not-front {
     float: right;
     div.block__content {
       //margin-right: 20px;
-
       button#edit-submit-1 {
         //margin-right: 20px;
       }
@@ -426,9 +432,12 @@ body.front {
       .panel-pane {
         @extend left95;
       }
+      p {
+        margin-bottom: 0;
+      }
     }
 
-    //.panel-col-middle {
+    .panel-col-middle {
     //  width: 100%;
     //  display: inline-block;
     //  margin: 20px 0 20px;
@@ -459,33 +468,6 @@ body.front {
     //      div.content {
     //        padding-left: 5px;
     //      }
-    //    }
-    //
-    //    div.view-vacancies {
-    //      padding-left: 25px;
-    //      div.views-row {
-    //        border-bottom: 1px dashed $dottedBorder;
-    //        margin: 5px 0;
-    //        padding-bottom: 5px;
-    //        width: 90%;
-    //
-    //        div.views-field-title {
-    //          // font-weight: bold;
-    //        }
-    //        span.vacancy-block-closing-date-label {
-    //          color: $lightGrey;
-    //          &:after {
-    //            content: ": ";
-    //          }
-    //        }
-    //      }
-    //    }
-    //
-    //    div.more-link {
-    //      margin-right: 15px;
-    //      padding-left: 15px;
-    //      background: url("../images/Icon_Arrow.gif") no-repeat scroll right 5px transparent;
-    //      padding-right: 15px;
     //    }
     //
     //    .front-block-body > h3 {
@@ -538,38 +520,35 @@ body.front {
     //      }
     //    }
     //  }
-    //}
+    }
 
     .panel-col-middle,
     .panel-col-bottom {
       width: 100%;
-       & > div.panel-pane, div.panels-ipe-region > div.panels-ipe-sort-container > .panels-ipe-portlet-wrapper {
+       & > div.panel-pane,
+       div.panels-ipe-region > div.panels-ipe-sort-container > .panels-ipe-portlet-wrapper,
+       .pane-vacancies {
         @extend left95;
         width: 32%;
         border-radius: $borderRadius;
         border: 1px solid #bbccdd;
         background-color: #F6F9FA;
         background: linear-gradient(#F6F9FA 50%, #fff);
-
         margin-bottom: 15px;
-
         &:first-of-type {
           margin-right:20px;
         }
       }
       ul {
         list-style: none;
-
         li {
           border-bottom: 1px dashed $dottedBorder;
           margin: 5px 0;
           padding-bottom: 5px;
           width: 90%;
-
           a {
             padding-left: 15px;
             background: url("../images/Icon_Arrow.gif") no-repeat scroll left 3px rgba(0, 0, 0, 0);
-
             color: #730d22;
             text-decoration: none;
             &:hover {
@@ -578,10 +557,38 @@ body.front {
           }
         }
       }
+      .view-vacancies {
+        padding-left: 25px;
+        .views-row {
+          border-bottom: 1px dashed $dottedBorder;
+          margin: 5px 0;
+          padding-bottom: 5px;
+          width: 90%;
+          div.views-field-title {
+            // font-weight: bold;
+          }
+          span.vacancy-block-closing-date-label {
+            color: $lightGrey;
+            &:after {
+              content: ": ";
+            }
+          }
+        }
+      }
+      .more-link {
+        margin-right: 15px;
+        padding-left: 15px;
+        background: url("../images/Icon_Arrow.gif") no-repeat scroll left 5px transparent;
+        padding-right: 15px;
+        text-align: left;
+      }
     }
-    .bean-image-and-text h2:after {
-      background-color: $highlightColour !important;
-      background-image: url("../../agency_whitesite/images/arrow.svg?1416573831"), linear-gradient( lighten($highlightColour, 8%) 2%, darken($highlightColour, 8%) ) !important;
+    .bean-image-and-text h2 {
+      font-size: 1.5em;
+      &:after {
+        background-color: $highlightColour !important;
+        background-image: url("../../agency_whitesite/images/arrow.svg?1416573831"), linear-gradient( lighten($highlightColour, 8%) 2%, darken($highlightColour, 8%) ) !important;
+      }
     }
   }
 }
