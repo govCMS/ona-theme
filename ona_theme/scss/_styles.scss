@@ -99,7 +99,8 @@ h2 {
 
 
 .page-wrapper {
-  margin-top: 0;
+  //margin-top: 0;
+  margin: 0 auto; // if we're making it flush at the top, it shoould be the same on the bottom too..
 }
 
 
@@ -115,7 +116,7 @@ h2 {
 }
 .layout-front__content,
 .front .panel-1col-stacked .panel-col-top {
-  margin-left: 0;
+  //margin-left: 0; // Tim strongly disagrees with this and may have commented it out..
 }
 
 // ------------------------------------------
@@ -559,24 +560,31 @@ body.front {
           }
         }
       }
-      .view-vacancies {
+      .pane-vacancies {
         padding-left: 25px;
         h2 {
           margin-left: 10px;
           color: #231f20;
         }
-        .views-row {
-          border-bottom: 1px dashed $dottedBorder;
-          margin: 5px 0;
-          padding-bottom: 5px;
-          width: 90%;
-          div.views-field-title {
-            // font-weight: bold;
-          }
-          span.vacancy-block-closing-date-label {
-            color: $lightGrey;
-            &:after {
-              content: ": ";
+        .view-vacancies {
+          padding-left: 25px;
+          .views-row {
+            border-bottom: 1px dashed $dottedBorder;
+            margin: 5px 0;
+            padding-bottom: 5px;
+            width: 90%;
+            //div.views-field-title {
+            //   font-weight: bold;
+            //}
+            span.vacancy-block-closing-date-label {
+              //color: $lightGrey; // not dark enough against the bg gradient
+              color: #666;
+              &:after {
+                content: ": ";
+              }
+            }
+            span.vacancy-block-closing-date-field {
+              color: #231f20;
             }
           }
         }
@@ -587,6 +595,7 @@ body.front {
         background: url("../images/Icon_Arrow.gif") no-repeat scroll left 5px transparent;
         padding-right: 15px;
         text-align: left;
+        padding-bottom: 10px;
       }
     }
     .bean-image-and-text h2 {
