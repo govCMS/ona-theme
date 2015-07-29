@@ -180,7 +180,7 @@ function agency_whitesite_button($variables) {
     $element['#attributes']['class'][] = 'form-button-disabled';
   }
 
-  return '<button' . drupal_attributes($element['#attributes']) . ' />' . $element['#attributes']['value'] . '</button>';
+  return '<button' . drupal_attributes($element['#attributes']) . '>' . $element['#attributes']['value'] . '</button>';
 }
 
 /**
