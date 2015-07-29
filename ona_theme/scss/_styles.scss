@@ -526,8 +526,7 @@ body.front {
     .panel-col-bottom {
       width: 100%;
        & > div.panel-pane,
-       div.panels-ipe-region > div.panels-ipe-sort-container > .panels-ipe-portlet-wrapper,
-       .pane-vacancies {
+       div.panels-ipe-region > div.panels-ipe-sort-container > .panels-ipe-portlet-wrapper {
         @extend left95;
         width: 32%;
         border-radius: $borderRadius;
@@ -537,6 +536,9 @@ body.front {
         margin-bottom: 15px;
         &:first-of-type {
           margin-right:20px;
+        }
+        &:nth-of-type(6) {
+          margin-right: 17px;
         }
       }
       ul {
@@ -559,6 +561,10 @@ body.front {
       }
       .view-vacancies {
         padding-left: 25px;
+        h2 {
+          margin-left: 10px;
+          color: #231f20;
+        }
         .views-row {
           border-bottom: 1px dashed $dottedBorder;
           margin: 5px 0;
@@ -584,7 +590,7 @@ body.front {
       }
     }
     .bean-image-and-text h2 {
-      font-size: 1.5em;
+      font-size: 1.35em;
       &:after {
         background-color: $highlightColour !important;
         background-image: url("../../agency_whitesite/images/arrow.svg?1416573831"), linear-gradient( lighten($highlightColour, 8%) 2%, darken($highlightColour, 8%) ) !important;
