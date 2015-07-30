@@ -2,12 +2,21 @@
 
 
 @media (min-width: 980px) {
-  // Override homepage slideshow widths
+  // align search to header divider as requested
+  .region-navigation #block-search-api-page-default-search {
+    padding-left: 10px;
+  }
+
+  // Override homepage slideshow widths to align like above
   .slide-show__slide-left,
   #block-views-slideshow-block {
     .group-left {
-      width: 668px;
+      width: 690px;
     }
+  }
+  .slide-show__slide-right,
+  #block-views-slideshow-block .group-right {
+    width: 290px;
   }
 }
 
