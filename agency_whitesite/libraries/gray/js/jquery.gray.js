@@ -55,9 +55,7 @@
 
     elementType: function(element) {
       var type;
-      var tagName = element.type;
-      console.log(tagName);
-      if(tagName == 'IMG') {
+      if(element.prop("tagName")==='IMG') {
         type = 'Img';
       } else {
         type = 'Bg';
