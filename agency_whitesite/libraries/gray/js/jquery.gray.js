@@ -55,7 +55,8 @@
 
     elementType: function(element) {
       var type;
-      if(element.prop("tagName")==='IMG') {
+
+      if (element.prop('tagName') === 'IMG') {
         type = 'Img';
       } else {
         type = 'Bg';
@@ -243,7 +244,4 @@
   };
 
   $(document).ready(function() {
-    $('.grayscale:not(.grayscale-replaced)')[pluginName]();
-  });
-
-})(jQuery, window, document);
+    $('.grayscale:not(.grayscale-replaced)')[plugin

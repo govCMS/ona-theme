@@ -23,11 +23,11 @@
 @media (max-width: 980px) {
   // Front page specific rules
   body.front .panel-1col-stacked {
-    .panel-col-middle {
-      .panel-pane.pane-block {
-        width: 50%;
-      }
+    //.panel-col-middle {
+    .panel-pane.pane-block {
+      width: 50%;
     }
+    //}
   }
 
   #block-search-api-page-default-search {
@@ -51,7 +51,8 @@
     }
   }
 
-  .panel-col-middle {
+  .panel-col-middle,
+  .panel-col-bottom {
     .panel-pane {
       width: 49.3% !important;
       &:nth-of-type(2) {
