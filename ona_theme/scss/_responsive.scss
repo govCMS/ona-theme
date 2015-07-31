@@ -55,14 +55,16 @@
   .panel-col-bottom {
     .panel-pane {
       width: 49.3% !important;
+      float: left;
+      margin-right: 20px;
       &:nth-of-type(2) {
         margin-left: 0 !important;
       }
     }
-    .panel-pane.pane-block.pane-bean-homepage-message-from-dg {
-      width: 100% !important;
-      margin-bottom: 10px;
-    }
+    //.panel-pane.pane-block.pane-bean-homepage-message-from-dg {
+    //  width: 100% !important;
+    //  margin-bottom: 10px;
+    //}
   }
 
 }
