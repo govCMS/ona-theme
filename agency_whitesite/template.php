@@ -588,6 +588,6 @@ function agency_whitesite_js_alter(&$javascript) {
   }
   // Swap out jQuery to use an updated version of the library.
   if ($replace_jquery) {
-    $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'agency_whitesite') . '/js/vendor/jquery.min.js';
+    // $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'agency_whitesite') . '/js/vendor/jquery.min.js';
   }
 }
