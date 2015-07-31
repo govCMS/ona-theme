@@ -244,4 +244,7 @@
   };
 
   $(document).ready(function() {
-    $('.grayscale:not(.grayscale-replaced)')[plugin
+    $('.grayscale:not(.grayscale-replaced)')[pluginName]();
+  });
+
+})(jQuery, window, document);
